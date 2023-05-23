@@ -1,0 +1,14 @@
+.tabContainer {
+  padding: 10px;
+}
+.controlPanel {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.controlPanelFilters {
+  display: flex;
+}
+.controlPanelElement {
+  margin-right: 10px;
+}
