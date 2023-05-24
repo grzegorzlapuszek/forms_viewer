@@ -26,17 +26,27 @@ const ReusableTable = (props: ReusableTableProps) => {
     return null;
   };
 
+  const headerStyling = {
+    fontWeight: "bold",
+    backgroundColor: "lightgray",
+  };
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow>
             {columns.map((col) => (
-              <TableCell key={col.id} style={col.style}>
+              <TableCell
+                key={col.id}
+                style={{ ...col.style, ...headerStyling }}
+              >
                 {col.label}
               </TableCell>
             ))}
-            {rowActions && <TableCell style={{ width: "5%" }}></TableCell>}
+            {rowActions && (
+              <TableCell style={{ width: "5%", ...headerStyling }}></TableCell>
+            )}
           </TableRow>
         </TableHead>
         <TableBody>
